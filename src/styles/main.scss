@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box; 
 }
+
+#root {
+  background: #4e4949;
+  color: #929292;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+@import 'header'; 
+@import 'footer'; 
+
+main {
+  flex-grow: 1;
+}

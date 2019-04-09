@@ -5,10 +5,11 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 const Header = props => {
   return (
-    <header>
-      <div>
-      Icon: <FontAwesomeIcon icon={faReact} />
-      </div>
+    <header className="header">
+      <h1>
+        <FontAwesomeIcon icon={faReact}/>
+        Online shop
+      </h1>
       <Cards/>
     </header>
   )
