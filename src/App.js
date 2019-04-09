@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/main.scss';
+import { Route, Switch } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Home from './components/home/Home';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo, faSign, faHorseHead, faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+library.add(faSign, faAdjust, faIgloo, faHorseHead, faReact);
+const App = props => {
+  return (    
+    <Layout>
+      <Home/>
+    </Layout>
+  );
 }
 
 export default App;
