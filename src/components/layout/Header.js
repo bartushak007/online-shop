@@ -1,5 +1,6 @@
 import React from 'react';
-import Cards from '../Cards';
+import CardsIcon from '../CardsIcon';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,9 +9,9 @@ const Header = props => {
     <header className="header">
       <h1>
         <FontAwesomeIcon icon={faReact}/>
-        Online shop
+        <NavLink to="/">Online shop</NavLink>
       </h1>
-      <Cards/>
+      <CardsIcon/>
     </header>
   )
 } 

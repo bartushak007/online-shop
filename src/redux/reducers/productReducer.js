@@ -1,6 +1,6 @@
 import { FETCH_PRODUCTS } from '../actions/types';
 
-const initialState = { products: [], loaded: true };
+const initialState = { products: [], loading: false };
 
 export default (state = initialState, action) => {
   switch(action.type) {
@@ -8,7 +8,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         products: action.payload,
-        loaded: false
+        loading: false
       }
     }
     default:

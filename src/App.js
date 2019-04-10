@@ -1,15 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './styles/main.scss';
 import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Layout from './components/layout/Layout';
-import Home from './components/home/Home';
+import ProductsList from './pages/products-list/ProductsList';
+import Product from './pages/product/Product';
+import Error from './pages/error/Error';
+import CardsPage from './pages/cards/CardsPage';
+import { fetchProducts } from './redux/actions/index';
 
 const App = props => {
+//   useEffect(() => {
+//     setTimeout(() => {
+//       fetchProducts();
+//     }, 0);
+//   }, []);
   return (    
     <Layout>
-      <Home/>
+      <Switch>
+        <Route path="/" component={ProductsList} exact/>
+        <Route path={`/product/:id`} component={Product} />
+        <Route path="/Cards" component={CardsPage}/>
+        <Route path="*" component={Error}/>                 
+      </Switch>          
     </Layout>
   );
 }
 
-export default App;
+// const mapStateToProps = state => ({
+//   products: state.products.products,  
+// })
+
+export default connect(null, {fetchProducts})(App);

@@ -1,7 +1,12 @@
-import { FETCH_PRODUCTS } from './types';
+import { FETCH_PRODUCTS, LOADING } from './types';
 import { resolvePath } from '../../utils';
 
+export const loading = () => ({
+  type: LOADING,
+});
+
 export const fetchProducts = () => dispatch => {  
+  dispatch(loading());
   
   fetch(resolvePath('/data.json'))
     .then(resp => resp.json())
