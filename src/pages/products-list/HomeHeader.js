@@ -1,11 +1,11 @@
 import React from 'react';
-import StyleProductsListToggle from './StyleProductsListToggle';
+import Toggle from './Toggle';
 import Sort from './Sort';
 
 const HomeHeader = () => {
   return (
-    <header>
-      <StyleProductsListToggle/>
+    <header className="products-list-header">
+      <Toggle/>
       <Sort/>
     </header>
   )

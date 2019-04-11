@@ -1,20 +1,23 @@
 import React, {useEffect} from 'react';
 import './styles/main.scss';
 import { Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
 import Layout from './components/layout/Layout';
 import ProductsList from './pages/products-list/ProductsList';
 import Product from './pages/product/Product';
 import Error from './pages/error/Error';
 import CardsPage from './pages/cards/CardsPage';
 import { fetchProducts } from './redux/actions/index';
+import { connect } from 'react-redux';
 
-const App = props => {
-//   useEffect(() => {
-//     setTimeout(() => {
-//       fetchProducts();
-//     }, 0);
-//   }, []);
+
+const App = ({ fetchProducts }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      fetchProducts();
+    }, 0);
+    
+  }, []);
+
   return (    
     <Layout>
       <Switch>
@@ -31,4 +34,4 @@ const App = props => {
 //   products: state.products.products,  
 // })
 
-export default connect(null, {fetchProducts})(App);
+export default connect(null, { fetchProducts })(App);

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sort = () => {
   return (
-    <>hello</>
+    <div>hello</div>
   )
 }
 

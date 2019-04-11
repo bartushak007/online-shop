@@ -9,7 +9,7 @@ const Header = props => {
     <header className="header">
       <h1>
         <FontAwesomeIcon icon={faReact}/>
-        <NavLink to="/">Online shop</NavLink>
+        <NavLink className="header__title-nav" to="/">Online shop</NavLink>
       </h1>
       <CardsIcon/>
     </header>

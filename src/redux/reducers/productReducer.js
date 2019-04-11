@@ -1,6 +1,6 @@
-import { FETCH_PRODUCTS } from '../actions/types';
+import { FETCH_PRODUCTS, LOADING, CHANGE_STYLE } from '../actions/types';
 
-const initialState = { products: [], loading: false };
+const initialState = { products: [], loading: false, toggle: true };
 
 export default (state = initialState, action) => {
   switch(action.type) {
@@ -8,7 +8,19 @@ export default (state = initialState, action) => {
       return {
         ...state,
         products: action.payload,
-        loading: false
+        
+      }
+    }
+    case LOADING: {
+      return {
+        ...state,
+        loading: action.payload,        
+      }
+    }
+    case CHANGE_STYLE: {      
+      return {
+        ...state,
+        toggle: !state.toggle,        
       }
     }
     default:

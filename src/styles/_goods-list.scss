@@ -1,0 +1,51 @@
+.goods-list {
+  &__item {
+    margin: 10px 10px;
+    border: solid 1px #6f6262;
+    padding: 6px;
+    border-radius: 3px;
+    display: flex;
+  }
+
+  &__img-container {
+    margin: auto 0;
+    
+  }
+
+  &__title-container {
+    margin: auto 0 auto 5px;       
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {    
+    // margin: auto 0;
+  }
+
+  &__button, &__price {
+    font-size: 15px; 
+    background: #757575;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px 9px;
+  }
+
+  &__price {
+    margin-left: 4px;
+    background: #5a6d47;
+    color: #ffffff;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+}

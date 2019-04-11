@@ -1,3 +1,10 @@
-.product {
-  display: flex;
+.product {  
+  display: flex;  
+  margin: auto;  
+  padding: 60px 60px 0 0; 
+  
+  &__img, &__discription {
+    // margin: auto;
+  }
+  
 }

@@ -4,6 +4,10 @@
   box-sizing: border-box; 
 }
 
+body {
+  min-width: 320px;
+}
+
 #root {
   background: #4e4949;
   color: #929292;
@@ -12,10 +16,13 @@
   flex-direction: column;
   justify-content: space-between;  
 }
-@import 'header'; 
-@import 'footer'; 
-@import 'product';
 
 main {
   flex-grow: 1;
 }
+
+@import 'header'; 
+@import 'footer'; 
+@import 'product';
+@import 'goods-list';
+@import 'products-list-header';
